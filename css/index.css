@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    margin: 10px auto 0px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.levelChoice {
+    margin: 10px auto 0px;
+	text-align: center;
+}
+
+.levelChoice button {
+    height: 20px;
+    width: 50px;
+    margin: 0px 5px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+}
+
+.levelChoice button.active {
+	background-color: orangered;
+}
+
+
+.levelDescription {
+    margin: 10px auto 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.gameBar {
+	margin: 10px auto 10px;
+	text-align: center;
+}
+
+.gameBar button {
+	height: 25px;
+	width: 55px;
+	margin: 0px 5px;
+	font-size: 10px;
+	color: white;
+	background-color: royalblue;
+	border: none;
+	border-radius: 4px;
+}
+
+
+.gameNumber {
+	margin: 10px auto 15px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.mineArea table{
+	/* 为啥margin 10 auto 10 表格无法居中 */
+	margin: 0 auto; 
+}
+
+.mineArea table td {
+	width: 20px;
+	height: 20px;
+	background-color: #ccc;
+	border: 2px solid;
+	border-color: #ffffff #a1a1a1 #a1a1a1 #ffffff;
+	text-align: center;
+	line-height: 20px;
+}
+
+td>div {
+	width: 100%;
+	height: 100%
+}
+
+/* div:canAddFlag能否添加旗子 mine是否是雷 flag是否添加了旗子 */
+td>div.mine {
+	background: #ccc url("../images/mine.png") center/cover no-repeat;
+	/* opacity 背景透明度 */
+	/* opacity: 0.2; */
+	opacity: 0;
+}
+
+/* css层叠性，一个dom元素存在多个选择器，使用css中最下面的选择器 */
+td>div.flag {
+	background: #ccc url("../images/flag.png") center/cover no-repeat;
+	opacity: 1;
+	/* opacity: 0; */
+}
+
+td>div.one {
+	color: blue;
+	line-height: 20px;
+}
+
+td>div.two {
+	color: firebrick;
+	line-height: 20px;
+}
+
+td>div.three {
+	color: darkgreen;
+	line-height: 20px;
+}
+
+td>div.four {
+	color: darkorange;
+	line-height: 20px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mineswapper</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="header">MineSwapper</div>
+	<!-- 难度选择 -->
+    <div class="levelChoice">
+        <button class="active">easy</button>
+        <button>middle</button>
+        <button>hard</button>
+    </div>
+	<!-- 对难度选择进行描述 -->
+    <div class="levelDescription">
+        <div>grid-size <span class="gridSizeDesc"> 0 </span></div>
+		<div>mine-num  <span class="mineNumDesc"> 0 </span></div>
+    </div>
+======================================================================================	
+	<!-- 游戏进行工具栏 -->
+	<div class="gameBar">
+		<button onclick="start()"> 开始 </button>
+		<button onclick="reset()"> 重置 </button>
+	</div>
+	
+	<!-- 所用时间和相关数字统计 -->
+	<div class="gameNumber">
+		<div>time-count <span> 0 </span></div>	
+		<div>used-flag-number <span id="usedFlagNum"> 0 </span></div>
+	</div>
+	
+	<!-- 扫雷格子 -->
+    <div class="mineArea">
+		
+    </div>
+	
+	<div>
+		dedjoejde
+	</div>
+    <script type="text/javascript" src="./js/tool.js"></script>
+    <script type="text/javascript" src="./js/config.js"></script>    
+	<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
