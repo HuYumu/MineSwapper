@@ -1,11 +1,6 @@
 # MineSwapper
-### Brief Introduction
-
-This repository is the source code for a popular game worldwide called mineswapper
-
+A popular game worldwide called mineswapper
 Written by javascript,html and css.
-
-
 
 ### How to use this game
 
@@ -18,12 +13,4 @@ After this, you can start playing the game as the steps below:
 1. click the three green small buttons to choose the level of this game
 2. click the “clear” blue button to clear the game
 3. click the “start” blue button to play the game
-
-
-
-
-
-:sweet_potato:
-
-**We welcome everyone to contribute to our game. Whether is issues or pull request **
 
