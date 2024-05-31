@@ -24,25 +24,40 @@ function main() {
 	var hasReseted = false; //表明之前是否被重置过，为start做准备
 	
 	// 初始化	
-	init()
-	
+	init();
 	// 绑定游戏事件
 	bindEvent();
+	// 允许点击
+	bindMineAreaStart(0);
 }
 
+
+// /**
+//  * 开始游戏
+//  */
+// function start() {
+// 	if(!hasReseted) {
+// 		mineArea.innerText = ""
+// 		init()
+// 	} else {
+// 		hasReseted = false
+// 	}
+// 	// 绑定格子点击事件,由于游戏开始结束点击限制，不能放在bindEvent上
+// 	bindMineAreaEvent(0)
+// }
+
+
 /**
- * 开始游戏
+ * 重置当前游戏
  */
-function start() {
-	if(!hasReseted) {
-		mineArea.innerText = ""
-		init()
-	} else {
-		hasReseted = false
-	}
-	// 绑定格子点击事件,由于游戏开始结束点击限制，不能放在bindEvent上
+function reset() {
+	mineArea.innerText = ""
+	init()
 	bindMineAreaEvent(0)
+	// hasReseted = true
+	$("#usedFlagNum").innerText = 0
 }
+
 
 /**
  * 绑定mineArea事件
@@ -52,6 +67,7 @@ function bindMineAreaEvent(type) {
 	// start-0表示可接触，1表示不可接触
 	type == 0? bindMineAreaStart() : mineArea.onmousedown = null
 }
+
 
 /**
  * 允许触摸mineArea事件绑定
@@ -85,6 +101,19 @@ function init() {
 	initMine()
 	initMineArea()
 	initRelvantNum()
+}
+
+
+/**
+ * 生成地雷
+ */
+function initMine() {
+    var arr = new Array(currentLevel.row*currentLevel.col)
+    for(var i=0;i<arr.length;++i) {
+        arr[i] = i;
+    }
+    arr.sort(()=>0.5-Math.random())
+    mineArr = arr.slice(0,currentLevel.mineNum)
 }
 
 
@@ -131,20 +160,8 @@ function initMineArea() {
         table.appendChild(tr)
     }
     mineArea.appendChild(table)
-
 }
 
-/**
- * 生成地雷
- */
-function initMine() {
-    var arr = new Array(currentLevel.row*currentLevel.col)
-    for(var i=0;i<arr.length;++i) {
-        arr[i] = i;
-    }
-    arr.sort(()=>0.5-Math.random())
-    mineArr = arr.slice(0,currentLevel.mineNum)
-}
 
 /**
  * 初始化相应的数据
@@ -155,6 +172,7 @@ function initRelvantNum() {
 	$(".gridSizeDesc").innerText = gridSizeDescStr
 	$(".mineNumDesc").innerText = currentLevel.mineNum
 }
+
 
 /**
  * 绑定事件
@@ -208,7 +226,6 @@ function bindEvent() {
 		}
 		event.target.classList.add("active")
 	}
-
 }
 
 
@@ -345,12 +362,3 @@ function showAllMine() {
 }
 
 
-/**
- * 重置当前游戏
- */
-function reset() {
-	mineArea.innerText = ""
-	init()
-	bindMineAreaEvent(1)
-	hasReseted = true
-}
