@@ -1,7 +1,7 @@
 # MineSwapper
 A popular game worldwide called Mineswapper, Written in JavaScript, HTML and CSS.
 
-<img src="F:\IT之路\assets\images\description.png" style="zoom:40%;" />
+![description](".\images\description.png")
 
 ## How to use this game
 
