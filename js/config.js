@@ -1,18 +1,18 @@
 var config = {
     easy: {
-        row: 10,
-        col: 10,
+        row: 9,
+        col: 9,
         mineNum: 10
     },
     middle: {
-        row: 15,
-        col: 15,
-        mineNum: 18
+        row: 16,
+        col: 16,
+        mineNum: 40
     },
     hard: {
         row: 20,
-        col: 20,
-        mineNum: 20
+        col: 32,
+        mineNum: 100
     },
 	flagAll: 10
 }

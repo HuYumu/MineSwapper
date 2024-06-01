@@ -1,13 +1,13 @@
 # MineSwapper
-A popular game worldwide called mineswapper
+A popular game worldwide called Mineswapper, Written in JavaScript, HTML and CSS.
 
-Written by javascript,html and css
+<img src="F:\IT之路\assets\images\description.png" style="zoom:40%;" />
 
-### How to use this game
-As a web browser based application, you can play the game just with the browser in your laptop(Chrome/Edge/Firefox...)，open the index.html file with your browser which is in the root path of this project
+## How to use this game
 
-Then you can start to play the game through the following steps:
-1. click the three green small buttons to choose the level of this game
-2. click the “clear” blue button to clear the game
-3. click the “start” blue button to play the game
+As a web browser based application, you can play the game just with the browser in your laptop
+
+Open the `index.html` file with your browser which is in the root path of this project
+
+Click the three green small buttons to choose the level.
 
